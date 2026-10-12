@@ -1,0 +1,252 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(#3A025B,#8504cf);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+        background-color:white;
+        width: 450px;
+        padding: 1.5rem;
+        margin: 50px auto;
+        box-shadow: 0 20px 35px rgba(0,01,0.9);
+        border-radius: 10px;
+}
+form{
+    margin: 0 2rem;
+}
+.form-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #3A025B;
+}
+input{
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1.5rem;
+    font-size: 15px;
+}
+.input-group{
+    padding: 1% 0;
+    position: relative;
+}
+.input-group i{
+    position: absolute;
+    color: #3A025B;
+}
+input:focus{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid white;
+}
+input::placeholder{
+    color: transparent;
+}
+label{
+    color: #757575;
+    position: relative;
+    left: 1.2em;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top: -3em;
+    color: #3A025B;
+    font-size: 15px;
+}
+.recover{
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.recover a{
+    text-decoration: none;
+    color: white;
+}
+.recover a:hover{
+    color: #8504cf;
+    text-decoration: underline;
+}
+.btn{
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color:#3A025B ;
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+}
+.btn:hover{
+    background-color: #8504cf;
+}
+.or{
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.icons{
+    text-align: center;
+}
+.icons i{
+    color: #3A025B;
+    font-size: 25px;
+    border: 2px solid rgb(201, 199, 199);
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.icons i:hover{
+    background-color: #c96bff;
+    font-size: 23px;
+    border: 2px solid #8504cf;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 3rem;
+    margin-top: 0.9rem;
+    font-weight: bold;
+}
+button{
+    color: #3A025B;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+}
+button:hover{
+    text-decoration: underline;
+    color: #8504cf;
+}
+
+/* Large Desktop */
+@media (max-width:1500px){
+    .container{
+        width: 430px;
+    }
+}
+
+/* Laptop */
+@media (max-width:1200px){
+    .container{
+        width: 400px;
+        padding: 1.4rem;
+    }
+
+    .form-title{
+        font-size: 19px;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width:992px){
+    .container{
+        width: 370px;
+        padding: 1.3rem;
+    }
+
+    form{
+        margin: 0 1.5rem;
+    }
+
+    .links{
+        padding: 0 1.5rem;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Tablet */
+@media (max-width:768px){
+    .container{
+        width: 90%;
+        max-width: 350px;
+        padding: 1.2rem;
+    }
+
+    .form-title{
+        font-size: 18px;
+    }
+
+    input{
+        font-size: 14px;
+    }
+
+    .btn{
+        font-size: 1rem;
+    }
+
+    .icons i{
+        font-size: 22px;
+        padding-right: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+    body{
+        padding: 20px;
+    }
+
+    .container{
+        width: calc(100% - 20px);
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    form{
+        margin: 0 0.8rem;
+    }
+
+    .links{
+        padding: 0;
+        gap: 8px;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width:400px){
+    body{
+        padding: 15px;
+    }
+
+    .container{
+        width: calc(100% - 10px);
+        padding: 0.9rem;
+        border-radius: 8px;
+    }
+
+    .form-title{
+        font-size: 16px;
+    }
+
+    .links p,
+    button{
+        font-size: 0.85rem;
+    }
+}
